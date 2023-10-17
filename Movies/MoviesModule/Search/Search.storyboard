@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="ypg-ya-Q8K">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewControllerID" id="bEj-8E-a58" customClass="SearchViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7E-qR-1oc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dFa-Cu-vIO">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-Rt-p7R">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search movies" backgroundImage="nil" id="ASe-mY-UHQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="tintColor" systemColor="systemGray4Color"/>
+                                            <color key="barTintColor" systemColor="systemGray3Color"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="bEj-8E-a58" id="TPI-TV-b87"/>
+                                            </connections>
+                                        </searchBar>
+                                        <connections>
+                                            <outlet property="dataSource" destination="bEj-8E-a58" id="YKY-DK-nfH"/>
+                                            <outlet property="delegate" destination="bEj-8E-a58" id="yTj-vo-Jdi"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TSn-Rt-p7R" secondAttribute="bottom" id="1VC-6u-Rej"/>
+                                    <constraint firstAttribute="trailing" secondItem="TSn-Rt-p7R" secondAttribute="trailing" id="2ed-vU-qrO"/>
+                                    <constraint firstItem="TSn-Rt-p7R" firstAttribute="top" secondItem="dFa-Cu-vIO" secondAttribute="top" id="m92-uz-2pM"/>
+                                    <constraint firstItem="TSn-Rt-p7R" firstAttribute="leading" secondItem="dFa-Cu-vIO" secondAttribute="leading" id="wjU-BJ-8xc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Yl-T3-tTg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Yl-T3-tTg" firstAttribute="bottom" secondItem="dFa-Cu-vIO" secondAttribute="bottom" id="2R3-kI-1Z5"/>
+                            <constraint firstItem="dFa-Cu-vIO" firstAttribute="width" secondItem="Z7E-qR-1oc" secondAttribute="width" id="7S2-bd-8qS"/>
+                            <constraint firstItem="dFa-Cu-vIO" firstAttribute="top" secondItem="8Yl-T3-tTg" secondAttribute="top" id="WkD-Mg-rL0"/>
+                            <constraint firstItem="dFa-Cu-vIO" firstAttribute="width" secondItem="Z7E-qR-1oc" secondAttribute="width" multiplier="0.6" id="jxa-bu-KQV"/>
+                            <constraint firstItem="dFa-Cu-vIO" firstAttribute="centerX" secondItem="Z7E-qR-1oc" secondAttribute="centerX" id="qs6-7I-krY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7S2-bd-8qS"/>
+                                <exclude reference="jxa-bu-KQV"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="7S2-bd-8qS"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="jxa-bu-KQV"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="TSn-Rt-p7R" id="Rzr-XL-PS5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Erk-WW-VhB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-153" y="-19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nil" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

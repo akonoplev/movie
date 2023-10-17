@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="MovieListCell" customModule="Movies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="412" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="412" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kp4-Vj-FFd">
+                        <rect key="frame" x="16" y="16" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="Sn6-ZC-5eH"/>
+                            <constraint firstAttribute="width" constant="60" id="Xch-wj-lf1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="85W-UW-1cS">
+                        <rect key="frame" x="88" y="15.999999999999998" width="308" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yhv-31-DNC">
+                        <rect key="frame" x="88" y="44.333333333333336" width="308" height="17.666666666666664"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Yhv-31-DNC" secondAttribute="trailing" constant="16" id="3Gp-jc-fYJ"/>
+                    <constraint firstItem="Kp4-Vj-FFd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="BkJ-2x-R2j"/>
+                    <constraint firstItem="85W-UW-1cS" firstAttribute="leading" secondItem="Kp4-Vj-FFd" secondAttribute="trailing" constant="12" id="DfA-Ni-tzm"/>
+                    <constraint firstItem="Yhv-31-DNC" firstAttribute="leading" secondItem="Kp4-Vj-FFd" secondAttribute="trailing" constant="12" id="EYD-Vd-rnZ"/>
+                    <constraint firstItem="85W-UW-1cS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="FYk-yh-3Pa"/>
+                    <constraint firstItem="Yhv-31-DNC" firstAttribute="top" secondItem="85W-UW-1cS" secondAttribute="bottom" constant="8" id="avA-pO-lFR"/>
+                    <constraint firstItem="Kp4-Vj-FFd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ecK-UD-3Tg"/>
+                    <constraint firstAttribute="trailing" secondItem="85W-UW-1cS" secondAttribute="trailing" constant="16" id="hkI-za-dej"/>
+                    <constraint firstAttribute="bottom" secondItem="Yhv-31-DNC" secondAttribute="bottom" constant="40" id="vlZ-qw-JhD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgView" destination="Kp4-Vj-FFd" id="lVF-pG-vxT"/>
+                <outlet property="releaseLbl" destination="Yhv-31-DNC" id="B6Z-HG-Qzq"/>
+                <outlet property="titleLbl" destination="85W-UW-1cS" id="Ylh-cB-T23"/>
+            </connections>
+            <point key="canvasLocation" x="167.93893129770993" y="61.971830985915496"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
